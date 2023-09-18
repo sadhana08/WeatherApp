@@ -1,5 +1,417 @@
-.top-section{
-    width: 100%;
-    height: 30%;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
+/*********************** Style starts here ****************************/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(Icons&Images/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-section{
+    display: grid;
+    grid-template-columns: 8% 15% 8% 12% 57%;
+}
+
+.right-top{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column-start: 5;
+    grid-row-end: 2;
+    color: #fff;
+    text-align: center;
+}
+
+.hour{
+    margin-top: 75px;
+    font-size: 20px;
+}
+
+.lines > div{
+    font-size: 14px;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-right: 2px;
+    gap: 5px;
+}
+
+.right-top > div{
+    display: flex;
+    justify-content: space-around; 
+}
+
+.right-bottom{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column-start: 5;
+    grid-row-end: 3;
+    text-align: center;
+    color: #fff;
+}
+
+.right-bottom > div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.timedate{
+    display: grid;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    font-size: 32px;
+    margin-top: 0px;
+    color: #ffd7db;
+}
+
+.timedate span{
+    font-size: 22px;
+}
+
+.timedate img{
+    margin: 5px 0px -10px 5px;
+}
+
+.date{
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+.time{
+    margin: 0px;
+}
+
+.tempF{
+    display: grid;
+    grid-column-start: 3;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+}
+
+.tempC{
+    margin-top: 70px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+    border-right: 3px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.valueC{
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.valueF{
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    border-right: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.headerC{
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.headerF{
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 18px;
+    border-right: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.humidity{
+    display: grid;
+    grid-column-start: 4;
+    grid-row-end: 2;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 25px;
+}
+
+.value{
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.header{
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.precipitation{
+    display: grid;
+    grid-column-start: 4;
+    grid-row-end: 3;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 25px;
+    align-content: center;
+    align-items: center;
+}
+
+#stateSelect{
+    border: 0px;
+    padding: 10px;
+    font-size: 28px;
+    margin-top: 75px;
+    background-color: #686868;
+    color: #fff;
+    width: 250px;
+}
+
+.cityIcon{
+    margin-top: 35px;
+}
+
+
+/******************************* Section Middle **********************************/
+
+.middle-section{
+    background-color: black;
+    color: #fff;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.midTitle{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.choice > img , .choice > p{
+    display: inline-block;
+    margin: 10px;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+.topIcon1{
+    border-bottom: 3px solid rgb(26, 141, 235);
+}
+
+.topCities{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-content: center;
+}
+
+.heading{
+    margin-left: 42%;
+    font-size: 24px;
+    margin-top: 15px;
+    font-weight: lighter;
+}
+
+.displayMid{
+    border: none;
+    padding: 2px;
+    width: 45px;
+    text-align: center;
+    margin-right: 20px;
+    color: #fff;
+    background-color: #181818;
+    font-size: 16px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.midCard{
+    background-color: #181818;
+    width: 310px;
+    height: 200px;
+    margin: 30px 0px 15px 25px;
+    border-radius: 5px;
+    padding: 30px;
+    padding-right: 0px;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.midCard :hover{
+    transform: scale(0.9980); 
+    
+}
+
+.topCities :hover{
+    background-color: #4e4e4e;
+    overflow: hidden;
+    transform: scale(1.02); 
+}
+
+
+.line1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.line2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.line2 p{
+    margin-bottom: 15px;
+}
+
+.cardBold{
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+
+/**************************** Section Bottom ************************************/
+.bottom-section{
+    background-color: black;
+    color: #fff;
+    font-size: 18px;
+    padding: 80px 30px 40px 30px;
+    font-weight: lighter;
+}
+
+.bot-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bot-title-right > p, .bot-title-right > img{
+    display: inline-block;
+    font-weight: normal;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.bot-title-right > img{
+    margin-right: 20px;
+}
+
+.bot-heading{
+    font-size: 28px;
+}
+
+.cardContinent{
+    margin-top: 40px;
+    width: 500px;
+    height: 80px;
+    border-radius: 4px;
+    padding: 20px;
+    color: #fff;
+    background-color: #2e2e2e;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.continent{
+    color: #fcf054;
+}
+
+.cardLine1{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.continentTemp{
+    font-size: 28px;
+}
+
+.cardLine2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.bot-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    row-gap: 1rem;
+}
+
+.bot-cards :hover{
+    overflow: hidden;
+    animation: blink 3.5s infinite;
+}
+
+@keyframes blink{
+    10%, 30%{
+        background-color: #181818;
+    }
+    20%, 40%{
+        background-color: #2e2e2e;
+    }
+    /* 30%{
+        background-color: aqua;
+    } */
+}

@@ -4,43 +4,447 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    
     <title>Weather App</title>
 </head>
 <body>
     <div class="top-section">
-        <div class="cloud-img">
-            <img class="cloudy-top" src="Icons&Images/background.svg" alt="background">
+        <div class="cityIcon">
+            <img src="Icons for cities/kolkata.svg" alt="city" height="100px" width="100px">
         </div>
 
         <div class="places">
             <select name="state" id="stateSelect">
-                <option value="New Delhi">New Delhi</option>
+                <option value="NewDelhi">New Delhi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Moscow">Moscow</option>
+                <option value="Berlin">Berlin</option>
             </select>
         </div>
 
-        <div class="tempCtitle">
-            <p>Temp °C</p>
-        </div>
-        
         <div class="tempC">
-            <p>25 C</p>
-        </div>
-
-        <div class="tempFtitle">
-            <p>Temp F</p>
+            <p class="headerC">Temp °C</p>
+            <p class="valueC">25 C</p>
         </div>
 
         <div class="tempF">
-            <p>78 F</p>
+            <p class="headerF">Temp F</p>
+            <p class="valueF">78 F</p>
         </div>
 
-        <div class="time">
-            <p>10:10<span>: 44</span> </p>
+        <div class="timedate">
+            <p class="time">10:10<span>: 44</span> <img class="am" src="Icons&Images/amState.svg" alt="AM" height="80px" width="80px"> </p>
+            <p class="date">01-Mar-2020</p>
         </div>
 
-        <div class="date">
-            <p>01-Mar-2020</p>
+        <div class="humidity">
+            <p class="header">Humidity</p>
+            <p class="value">26%</p>
         </div>
+
+        <div class="precipitation">
+            <p class="header">Precipitation</p>
+            <p class="value">0%</p>
+        </div>
+
+        <div class="right-top">
+            <div class="hour">
+                <p> NOW </p>
+                <p> 11 AM </p>
+                <p> 12 PM </p>
+                <p> 1 PM </p>
+                <p> 2 PM </p>
+                <p> 3 PM </p>
+            </div>
+
+            <!-- <div class="lines">
+                <div> | </div>
+                <div> | </div>
+                <div> | </div>
+                <div> | </div>
+                <div> | </div>
+                <div> | </div>
+                <div> | </div>
+                <div> | </div>
+                <div> | </div>
+                <div> | </div>
+                <div> | </div>
+            </div> -->
+        </div>
+        <div class="right-bottom">
+            <div class="cloud-icon">
+                <img src="Weather Icons/cloudyIcon.svg" alt="" height="32" width="32">
+                <img src="Weather Icons/rainyIcon.svg" alt="" height="32" width="32">
+                <img src="Weather Icons/windyIcon.svg" alt="" height="32" width="32">
+                <img src="Weather Icons/rainyIcon.svg" alt="" height="32" width="32">
+                <img src="Weather Icons/windyIcon.svg" alt="" height="32" width="32">
+                <img src="Weather Icons/rainyIcon.svg" alt="" height="32" width="32">
+            </div>
+            <div class="cloud-num">
+                <p>6</p>
+                <p>7</p>
+                <p>7</p>
+                <p>8</p>
+                <p>8</p>
+                <p>6</p>
+            </div>
+        </div>
+    </div>
+
+<!------------------------------------ Middle Section --------------------------------------------->
+
+    <div class="middle-section">
+        <div class="midTitle">
+            <div class="heading">
+                <p>Top cities around world</p>
+            </div>
+            <div class="choice">
+                <img class="topIcon1" src="Weather Icons/sunnyIcon.svg" alt="">
+                <img class="topIcon2"src="Weather Icons/snowflakeIcon.svg" alt="">
+                <img class="topIcon3"src="Weather Icons/rainyIcon.svg" alt="">
+                <p>Display Top</p>
+                <input type="number" class="displayMid" min="3" max="10" value="5"> 
+            </div>
+        </div>
+        <div class="topCities">
+            <div class="midCard">
+                <div class="line1">
+                    <p class="cardCountry">New Delhi</p>
+                    <p class="cardTemp"><img src="Weather Icons/sunnyIcon.svg" alt="sunny" width="22px" height="22px"> 25°C</p>
+                </div>
+                <div class="line2">
+                    <div class="cardValues">
+                        <p class="cardBold">10:00 AM</p>
+                        <p class="cardBold">2-Mar-2020</p>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 10%</p>
+                        <!-- <p><img src="Weather Icons/windyIcon.svg" alt=""> 5km/hr</p> -->
+                        <p><img src="Weather Icons/precipitationIcon.svg" alt=""> 10%</p>
+                    </div>
+                    <img src="Icons for cities/kolkata.svg" alt="city" height="170px" width="170px">
+                </div>
+            </div>
+
+            <div class="midCard">
+                <div class="line1">
+                    <p class="cardCountry">New Delhi</p>
+                    <p class="cardTemp"><img src="Weather Icons/sunnyIcon.svg" alt="sunny" width="22px" height="22px"> 25°C</p>
+                </div>
+                <div class="line2">
+                    <div class="cardValues">
+                        <p class="cardBold">10:00 AM</p>
+                        <p class="cardBold">2-Mar-2020</p>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 10%</p>
+                        <!-- <p><img src="Weather Icons/windyIcon.svg" alt=""> 5km/hr</p> -->
+                        <p><img src="Weather Icons/precipitationIcon.svg" alt=""> 10%</p>
+                    </div>
+                    <img src="Icons for cities/kolkata.svg" alt="city" height="170px" width="170px">
+                </div>
+            </div>
+
+            <div class="midCard">
+                <div class="line1">
+                    <p class="cardCountry">New Delhi</p>
+                    <p class="cardTemp"><img src="Weather Icons/sunnyIcon.svg" alt="sunny" width="22px" height="22px"> 25°C</p>
+                </div>
+                <div class="line2">
+                    <div class="cardValues">
+                        <p class="cardBold">10:00 AM</p>
+                        <p class="cardBold">2-Mar-2020</p>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 10%</p>
+                        <!-- <p><img src="Weather Icons/windyIcon.svg" alt=""> 5km/hr</p> -->
+                        <p><img src="Weather Icons/precipitationIcon.svg" alt=""> 10%</p>
+                    </div>
+                    <img src="Icons for cities/kolkata.svg" alt="city" height="170px" width="170px">
+                </div>
+            </div>
+
+            <div class="midCard">
+                <div class="line1">
+                    <p class="cardCountry">New Delhi</p>
+                    <p class="cardTemp"><img src="Weather Icons/sunnyIcon.svg" alt="sunny" width="22px" height="22px"> 25°C</p>
+                </div>
+                <div class="line2">
+                    <div class="cardValues">
+                        <p class="cardBold">10:00 AM</p>
+                        <p class="cardBold">2-Mar-2020</p>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 10%</p>
+                        <!-- <p><img src="Weather Icons/windyIcon.svg" alt=""> 5km/hr</p> -->
+                        <p><img src="Weather Icons/precipitationIcon.svg" alt=""> 10%</p>
+                    </div>
+                    <img src="Icons for cities/kolkata.svg" alt="city" height="170px" width="170px">
+                </div>
+            </div>
+
+            <div class="midCard">
+                <div class="line1">
+                    <p class="cardCountry">New Delhi</p>
+                    <p class="cardTemp"><img src="Weather Icons/sunnyIcon.svg" alt="sunny" width="22px" height="22px"> 25°C</p>
+                </div>
+                <div class="line2">
+                    <div class="cardValues">
+                        <p class="cardBold">10:00 AM</p>
+                        <p class="cardBold">2-Mar-2020</p>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 10%</p>
+                        <!-- <p><img src="Weather Icons/windyIcon.svg" alt=""> 5km/hr</p> -->
+                        <p><img src="Weather Icons/precipitationIcon.svg" alt=""> 10%</p>
+                    </div>
+                    <img src="Icons for cities/kolkata.svg" alt="city" height="170px" width="170px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!------------------------------------------- Bottom Section ----------------------------------------------->
+
+    <div class="bottom-section">
+        <div class="bot-title">
+            <div class="bot-heading">
+                <p>Cities across continents at a Glance</p>
+            </div>
+            <div class="bot-title-right">
+                <p>Continent Name</p>
+                <img src="Icons&Images/arrowDown.svg" alt="" width="20px" height="34px">
+                <p>Temperature</p>
+                <img src="Icons&Images/arrowUp.svg" alt="" width="20px" height="34px">
+            </div>
+        </div>
+
+        <div class="bot-cards">
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Asia</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">38 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>Delhi, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Africa</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">38 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>Egypt, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Europe</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">26 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>London, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Asia</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">37 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>Chennai, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Africa</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">32 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>Egypt, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Europe</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">22 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>London, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Asia</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">36 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>Chennai, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Europe</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">30 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>London, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">South America</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">35 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>Brazil, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Asia</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">36 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>Chennai, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">Europe</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">28 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>London, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContinent">
+                <div class="cardLine1">
+                    <div>
+                        <p class="continent">South America</p>
+                    </div>
+                    <div>
+                        <p class="continentTemp">32 °C</p>
+                    </div>
+                </div>
+                <div class="cardLine2">
+                    <div>
+                        <p>Brazil, 10:10 AM</p>
+                    </div>
+                    <div>
+                        <p><img src="Weather Icons/humidityIcon.svg" alt=""> 53%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 </body>
